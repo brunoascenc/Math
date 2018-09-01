@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora online</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style>
+	    *{margin:0; padding:0; font-size:100%; font-family: 'Open Sans', sans-serif; box-sizing: border-box;  outline: none;}
+        h2 {font-size: 1.5em;  text-align: center; margin-bottom: 25px; margin-top: 18px; }
+        p {font-size: 1em; color:#777; text-align: center; }
+		.comeco {width: 100%; background-color: #154c77; padding: 50px 35%; font-size: 1.9em; }
+		.sobre input {margin-left: 525px; border-radius: 6px; border: 2px solid#111; background-color: initial;}
+		.sobre p {margin-top: 15px; margin-bottom: 10px;}
+		h3 {text-align: center; margin-bottom: 10px; }
+		button {width: 90px; border-radius:  15px; cursor: pointer;  border: 2px solid#111; background-color: initial;}
+		.principal {background-color: #154c77;}
+		.menu {width: 100%; background-color: #1a242b; float: left; padding: 15px;}
+		.menu li {display: inline;}
+		.menu li a {margin-right: 20px; color: #9d9d9d; text-decoration: none;}
+		.menu li a:hover {color:#fff;}
+		.newsletter {float: left; background-color: #1a242b; width: 100%; padding: 50px 8%;}
+		.newsletter h3{font-size: 1.8em; float: right; color: #fff;}
+		.newsletter p{font-size: 1.1em; float: left; margin-right: 8px;}
+		.newsletter input {padding: 15px; border-radius: 15px; border: 2px solid#111; background-color: initial;}
+		.cadastro {padding: 15px 10px; background-color: initial; color: #777;}
+		.rodape {width: 100%; padding: 15px 8%; background-color: #1a242b;}
+		.rodape p {color: #fff;}
+
+
+
+
+
+
+	</style>
+</head>
+
+<body>
+	<header class="comeco">
+		<h1>Math</h1>
+	</header>
+	<nav class="menu">
+		<ul>
+			<li> <a href = "#">Divisão</a></li>
+			<li> <a href = "#">Soma</a></li>
+			<li> <a href = "#">Multiplicação</a></li>
+			<li> <a href = "#">Subtração</a></li>
+
+
+		</ul>
+		</nav>
+	<main class="principal">
+		<h2>Facil Matematica</h2>
+		<article class="sobre">
+
+			<h3>Faça uma divisao:</h3>
+	        <input type="text" id="divisao1" placeholder="Primeiro valor">
+	        <input type="text" id="divisao2" placeholder="Segundo valor">
+	        <button onclick="verifica()">Resolver</button>
+	        <p id="msg"></p><br><br>
+
+	        <h3>Faça uma soma:</h3>
+	        <input type="text" id="soma1" placeholder="Primeiro valor">
+	        <input type="text" id="soma2" placeholder="Segundo valor">
+	        <button onclick="somar()">Resolver</button>
+	        <p id="msg2"></p><br><br>
+
+	        <h3>Faça uma multiplicação:</h3>
+	        <input type="text" id="mult1" placeholder="Primeiro valor">
+	        <input type="text" id="mult2" placeholder="Segundo valor">
+	        <button onclick="multiplicar()">Resolver</button>
+	        <p id="msg3"></p><br><br>
+
+	        <h3>Faça uma subtração:</h3>
+	        <input type="text" id="sub1" placeholder="Primeiro valor">
+	        <input type="text" id="sub2" placeholder="Segundo valor">
+	        <button onclick="subtracao()">Resolver</button>
+	        <p id="msg4"></p><br><br>
+
+		</article>
+	</main>
+	<section class="newsletter">
+		<h3>Nos ajude a crescer!</h3>
+		<p>News</p>
+		<input type="text" placeholder="Seu nome">
+		<input type="email" placeholder="Seu email">
+		<button class="cadastro">Cadastrar</button>
+
+	</section>
+	<footer class="rodape">
+		 <p>© Bruno - Todos os direitos reservados.</p>
+	</footer>
+	<script>
+		function verifica(){
+			var n1 = document.getElementById('divisao1').value
+			var n2 = document.getElementById('divisao2').value
+			var resultado = n1 / n2;
+			document.getElementById('msg').innerHTML = 'O resultado é: '+resultado;
+
+	    }
+
+		function somar(){
+			var n1 = document.getElementById('soma1').value
+			var n2 = document.getElementById('soma2').value
+			var resultadosoma = parseInt(n1) + parseInt(n2);
+
+			document.getElementById('msg2').innerHTML = 'O resultado é: '+resultadosoma;
+		}
+
+		function multiplicar(){
+			var n1 = document.getElementById('mult1').value
+			var n2 = document.getElementById('mult2').value
+			var resultadomult = n1 * n2;
+
+			document.getElementById('msg3').innerHTML = 'O resultado é: '+resultadomult;
+		}
+
+		function subtracao(){
+			var n1 = document.getElementById('sub1').value
+			var n2 = document.getElementById('sub2').value
+			var resultadosub = n1 - n2;
+
+			document.getElementById('msg4').innerHTML = 'O resultado é: '+resultadosub;
+		}
+
+
+	</script>
+</body>
+
+</html>
